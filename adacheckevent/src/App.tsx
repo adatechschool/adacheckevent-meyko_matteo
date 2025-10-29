@@ -1,14 +1,13 @@
-
-import { useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
+import Cards from './components/Cards'
 
 function App() {
-async function fetchApi(){
-const response = await fetch("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records?limit=20");
-  const data = await response.json();
- }  
-fetchApi()
-
+  return (
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <Cards />
+    </div>
+  )
 }
 
 export default App
